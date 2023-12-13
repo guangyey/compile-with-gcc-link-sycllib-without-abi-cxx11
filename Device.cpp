@@ -73,7 +73,7 @@ static void initDeviceProperties(int device) {
   auto& raw_device = dpcppGetRawDevice(device);
 
   device_prop.device_name = raw_device.get_info<sycl::info::device::name>();
-  device_prop.platform_name = raw_device.get_platform().get_info<sycl::info::platform::name()>();
+  device_prop.platform_name = raw_device.get_platform().get_info<sycl::info::platform::name>();
   device_prop.vendor = raw_device.get_info<sycl::info::device::vendor>();
   device_prop.driver_version = raw_device.get_info<sycl::info::device::driver_version>();
   device_prop.version = raw_device.get_info<sycl::info::device::version>();
